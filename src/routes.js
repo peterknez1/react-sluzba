@@ -10,6 +10,7 @@ const routes = () => (
         <Route exact path='/' component={Users}/>
         <Route exact path='/home' component={Home}/>
         <Route exact path='/user/:userId' component={UserDetails}/>
+        <Route exact path='/userDetails' component={UserDetails}/>
 
     </main>
 )
