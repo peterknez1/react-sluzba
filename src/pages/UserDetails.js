@@ -3,6 +3,7 @@ import UserData from "../data/users";
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import {Link} from "react-router-dom";
+import '../styles/my.css'
 
 
 
@@ -72,7 +73,7 @@ export class UserDetails extends Component {
                         console.log("UserDetails");
                         console.log(this.props);
                         return (
-                            <div className="card" style={this.divStyle()}>
+                            <div className="card details" style={this.divStyle()}>
                                 <img className="card-img-top" src={user.profileImage} alt="Card cap" />
                                 <div className="card-body">
                                     <h5 className="card-title">User {user.id}</h5>

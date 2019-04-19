@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import '../styles/my.css'
 export class User extends React.Component {
 
     constructor(){
@@ -9,7 +10,8 @@ export class User extends React.Component {
     }
 
     divStyle(){
-        return {width: '18rem'};
+        return {width: '18rem',
+                margin: 'auto'};
     };
 
     objectToCsv(user) {
@@ -48,7 +50,7 @@ export class User extends React.Component {
         let details = this.props.user.details;
         details = details.substring(0, 200);
         return (
-            <div className = "card" style = {this.divStyle()}>
+            <div className = "card margin" style = {this.divStyle()}>
                 <img className = "card-img-top" src = {this.props.user.profileImage} alt = "Card cap" />
                 <div className = "card-body">
                     <h5 className = "card-title">User {this.props.user.id}</h5>
@@ -63,8 +65,8 @@ export class User extends React.Component {
                             }
                         }
                     }>User details</Link>
-                    <button onClick={() => this.props.nameChangeHandler(this.props.user.id)} className="btn btn-primary text-white">Change name</button>
-                    <button onClick={() => this.props.userSelectHandler(this.props.user.firstName)} className="btn btn-primary text-white">Select</button>
+                    <button onClick={() => this.props.nameChangeHandler(this.props.user.id)} className="btn btn-primary">Change name</button>
+                    <button onClick={() => this.props.userSelectHandler(this.props.user.firstName)} className="btn btn-primary">Select</button>
                     <button onClick={() => (this.exportCsv(this.props.user))} className="btn btn-primary text-white">Export as CSV</button>
 
                 </div>

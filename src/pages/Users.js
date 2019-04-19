@@ -1,6 +1,7 @@
 import React from 'react'
 import Data from '../data/users.json'
 import User from '../components/User'
+import '../styles/my.css'
 
 export class Users extends React.Component {
 
@@ -82,7 +83,7 @@ export class Users extends React.Component {
 
                 <p>Selected user: {this.state.selected}</p>
 
-                <div className="users-list">
+                <div className="topContainer">
                     {allUsers}
 
                 </div>

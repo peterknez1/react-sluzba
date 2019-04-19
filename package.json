@@ -16,11 +16,12 @@
     "reactstrap": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-react": "react-scripts start ",
+    "start": "npm-run-all -p watch:css start-react",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "node-sass-chokidar src/styles/main.scss -o src/styles/",
+    "build:css": "node-sass-chokidar src/styles/style.scss -o src/styles/",
     "watch:css": "node-sass-chokidar src/styles -o src/styles --watch --recursive"
   },
   "eslintConfig": {
@@ -33,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@ckeditor/ckeditor5-alignment": "^11.0.0"
+    "@ckeditor/ckeditor5-alignment": "^11.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }
